@@ -1,0 +1,2 @@
+[08-May-2017 05:46:19 UTC] PHP Fatal error:  Call to a member function input_data() on null in /home/ibooster/public_html/application/controllers/Upload.php on line 68
+[08-May-2017 10:05:00 UTC] PHP Fatal error:  Call to undefined method Dauo::checklogin() in /home/ibooster/public_html/application/controllers/Test.php on line 16

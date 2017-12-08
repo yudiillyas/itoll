@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/button_orange_fade"
+tools:context="com.toelve.i_tollemployee.Buatpintu">
+<android.support.design.widget.AppBarLayout
+    android:id="@+id/toolbarHolder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/toolbar2" />
+</android.support.design.widget.AppBarLayout>
+<ScrollView
+    android:layout_below="@+id/toolbarHolder"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+
+            <EditText
+                android:id="@+id/etNamaPintu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boxes4"
+                android:fontFamily="@font/cantarell_italic"
+                android:hint="Nama Lokasi"
+                android:inputType="text"
+                android:padding="5dp" />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/etJumlahPintu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boxes4"
+            android:fontFamily="@font/cantarell_italic"
+            android:hint="Jumlah Slot Parkir"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <EditText
+            android:layout_marginTop="5dp"
+            android:id="@+id/etAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boxes4"
+            android:fontFamily="@font/cantarell_italic"
+            android:hint="Alamat"
+            android:inputType="text"
+            android:padding="5dp" />
+
+
+
+        <TextView
+            android:textSize="12sp"
+            android:textStyle="italic|bold"
+            android:fontFamily="@font/autour_one"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boxes4"
+            android:textColor="#000"
+            android:text="Latitude:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:focusable="false"
+            android:id="@+id/etLatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boxes4"
+            android:fontFamily="@font/cantarell_italic"
+            android:hint="Device ID"
+            android:inputType="none"
+            android:padding="5dp" />
+        <TextView
+            android:textSize="12sp"
+            android:textStyle="italic|bold"
+            android:fontFamily="@font/autour_one"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boxes4"
+            android:textColor="#000"
+            android:text="Longitude:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:focusable="false"
+            android:id="@+id/etLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boxes4"
+            android:fontFamily="@font/cantarell_italic"
+            android:hint="Longitude"
+            android:inputType="none"
+            android:padding="5dp" />
+
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvUnggah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abril_fatface"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Unggah Foto Anda"/>
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/ivFoto"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/tblfoto"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <Button
+            android:text="SIMPAN"
+            android:id="@+id/btSubmit"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/boxes4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</ScrollView>
+</RelativeLayout>

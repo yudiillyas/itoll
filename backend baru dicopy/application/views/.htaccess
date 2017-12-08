@@ -1,0 +1,7 @@
+SetEnvIf User-Agent "Android" allow_ua
+    SetEnvIf User-Agent "iPhone" allow_ua
+    SetEnvIf User-Agent "iPad" allow_ua
+    SetEnvIf User-Agent "iPod" allow_ua
+    Order deny,allow
+    deny from all
+    allow from env=allow_ua

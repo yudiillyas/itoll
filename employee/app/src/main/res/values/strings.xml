@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ARSIGMA Employee</string>
+    <string name="login">Login</string>
+    <string name="password">password</string>
+    <string name="username">Username</string>
+    <string name="header">header</string>
+    <string name="employee_edition">Employee Edition</string>
+</resources>

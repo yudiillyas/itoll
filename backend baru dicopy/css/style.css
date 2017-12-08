@@ -1,0 +1,119 @@
+<style>
+           #uji{  
+                background-color:#eee;  
+                cursor:pointer;  
+           }  
+           #merka{  
+                padding:12px;  
+                background: #d6e3ff;
+           } 
+           #merka:hover{  
+                background-color: #7295e0;
+           }  
+           #destinationlist {
+    max-height: 300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+     #fclist {
+    max-height: 200px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+   #fclist2 {
+    max-height: 200px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  
+ }
+   #fclistasd {
+    max-height: 200px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+          #uji{  
+                background-color:#eee;  
+                cursor:pointer;  
+           }  
+
+         #wiwi{  
+                background-color:#eee;  
+                cursor:pointer;  
+           }  
+           #ctry32{  
+                padding:12px;  
+                background: #d6e3ff;
+           } 
+            #submit{  
+                padding:12px;  
+                background: #d6e3ff;
+                margin-top: 20px;
+           } 
+           option{
+            margin: 10px;
+           }
+           #ctry32:hover{  
+                background-color: #7295e0;
+           }  
+           #countryList {
+    max-height: 300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+   margin-top: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.pac-container {
+  font-family: Roboto;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+
+
+ #jumbo{
+  background: #afbed6;
+ }
+
+#headerindex{
+  text-align: center;;
+  background: #00B9BD;
+}
+#login{
+
+  text-align: center;
+}
+ #main{
+  background: #9cbbed;
+  
+}
+</style>

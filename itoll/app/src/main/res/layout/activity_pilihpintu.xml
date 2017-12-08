@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/button_orange_fade"
+    tools:context="com.toelve.itoll.Pilihpintu">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbarHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar2" />
+    </android.support.design.widget.AppBarLayout>
+<RelativeLayout
+    android:padding="30dp"
+    android:layout_below="@+id/toolbarHolder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivFoto"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/profilkosong" />
+
+
+            <TextView
+                android:layout_below="@+id/ivFoto"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvNama"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:gravity="center"
+                android:text="Nama Pintu" />
+
+
+        <TextView
+            android:layout_below="@+id/tvNama"
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#999898"/>
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_below="@+id/textView2"
+                android:id="@+id/tvAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sniglet"
+                android:gravity="center"
+                android:text="Alamat" />
+
+        <TextView
+            android:layout_below="@+id/tvAlamat"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#999898" />
+<ScrollView
+    android:layout_below="@+id/tvAlamat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <LinearLayout
+android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/lnDinamis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+</ScrollView>
+
+
+</RelativeLayout>
+</RelativeLayout>

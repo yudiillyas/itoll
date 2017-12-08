@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/button_orange_fade"
+tools:context="com.toelve.itoll.Tunggukeluar">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbarHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/toolbar2" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/ivFoto"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/toolbarHolder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/profilkosong" />
+
+    <Button
+        android:id="@+id/btKeluar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ivFoto"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/tombol"
+        android:gravity="center"
+        android:text="Keluar Parkir" />
+
+</RelativeLayout>

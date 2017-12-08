@@ -1,0 +1,94 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Tambahpoint extends CI_Controller {
+function __construct(){
+		parent::__construct();		
+		$this->load->model('dauo');
+		$this->load->helper('url');
+		$this->load->library('session');
+ 		
+	}
+	public function index()
+	{
+if(isset($_POST['id'])){
+$id=$_POST['id'];
+  $points=$this->dauo->ambilpoint($id);
+
+$username=$_POST['username'];
+$point=$_POST['point'];
+$int = (int)$point;
+$int2 = (int)$points;
+$pointtotal=$int+$int2;
+
+  $kebakaran='AIzaSyDNqVa4baw5TUzYvGQM-jirqEBDQ7KWncM';
+  $this->dauo->tambahpoint($id,$pointtotal);
+  $token=$this->dauo->ambiltokendrivers($username);
+										$reg_token = array($token);		
+										$message ="Point tambah ".$point;
+										
+										//Creating a message array 
+										$msg = array
+										(
+											'message' 	=> $message,
+											'title'		=> $username,
+											'subtitle'	=> "Point Anda ".$pointtotal,
+											'tickerText'	=> "Point Anda ".$pointtotal,
+											'vibrate'	=> 1,
+											'sound'		=> 1,						
+											'hasilnya'		=> 'point',	
+											
+										);
+										
+										//Creating a new array fileds and adding the msg array and registration token array here 
+										$fields = array
+										(
+											'registration_ids' 	=> $reg_token,
+											'data'			=> $msg
+										);
+										
+										//Adding the api key in one more array header 
+										$headers = array
+										(
+											'Authorization: key=' . $kebakaran,
+											'Content-Type: application/json'
+										); 
+										
+										//Using curl to perform http request 
+										$ch = curl_init();
+										curl_setopt( $ch,CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send' );
+										curl_setopt( $ch,CURLOPT_POST, true );
+										curl_setopt( $ch,CURLOPT_HTTPHEADER, $headers );
+										curl_setopt( $ch,CURLOPT_RETURNTRANSFER, true );
+										curl_setopt( $ch,CURLOPT_SSL_VERIFYPEER, false );
+										curl_setopt( $ch,CURLOPT_POSTFIELDS, json_encode( $fields ) );
+										
+										//Getting the result 
+										$result = curl_exec($ch );
+										curl_close( $ch );
+										
+										//Decoding json from result 
+										$res = json_decode($result);
+
+										
+										//Getting value from success 
+										$flag = $res->success;
+										
+										//if success is 1 means message is sent 
+										if($flag == 1){
+
+											echo 'sukses';
+											redirect('/Welcome', 'refresh');
+														}
+										else
+												{
+														echo 'Point masuk tapi anda gagal kirim notifikasi anda akan dialihkan ke dashboard';
+												redirect('/Welcome', 'refresh');
+												}
+									         			      
+
+					}else{
+						echo "anda tidak berhak";
+					}
+
+		}
+}
